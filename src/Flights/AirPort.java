@@ -39,13 +39,19 @@ public class AirPort
 	
 	public boolean addFlight(Flight flight) {
 
-        if(!flights.contains(flight)) {
+         for(Flight fly: flights)
+		 {
+			 if(fly.equals(flight)) 
+		        {
 
+		        	return false;
+
+		        }
+		 }
+		
         	flights.add(flight);
-        	return true;
-
-        }
-		return false;
+		
+    	return true;
 
         
 
